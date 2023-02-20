@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".HelloworldActivity"
+              android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/host_edit_text"
+            android:layout_weight="0.7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Host" />
+        <EditText
+            android:id="@+id/port_edit_text"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter Port" />
+        <EditText
+            android:id="@+id/file_edit_text"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter File Name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/send_button"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:layout_width="0dp"
+            android:onClick="sendMessage"
+            android:text="Request" />
+        <Button
+            android:id="@+id/tryme_button"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:layout_width="0dp"
+            android:onClick="tryMe"
+            android:text="Lucky !" />
+        <Spinner
+            android:id="@+id/tryme_index"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/quote_index"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/record_button"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Start Audio Record" />
+        <Button
+            android:id="@+id/save_button"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Save rec results"
+            android:onClick="saveResult"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:textSize="16sp"
+        android:text="Response:" />
+
+    <TextView
+        android:id="@+id/grpc_response_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:gravity="center"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/gif_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true" />
+
+</LinearLayout>

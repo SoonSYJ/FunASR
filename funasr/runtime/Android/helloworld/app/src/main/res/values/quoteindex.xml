@@ -1,0 +1,12 @@
+<resources>
+    <string-array name="quote_index">
+        <item> 现代名言 </item>
+        <item> 现代文学 </item>
+        <item> 现代诗歌 </item>
+        <item> 现代动漫 </item>
+        <item> 现代影视剧 </item>
+        <item> 现代网络 </item>
+        <item> 古诗 </item>
+        <item> 歇后语 </item>
+    </string-array>
+</resources>
